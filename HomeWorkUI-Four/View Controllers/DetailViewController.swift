@@ -21,7 +21,8 @@ class DetailViewController: UIViewController {
         user = StorageManager.shared.getUser()
         nameLabel.text = user.name
         suranmeLabel.text = user.surname
-        
+        imageViewUserDetail.image = UIImage(named: user.userImageName)
+        imageViewUserDetail.layer.cornerRadius = imageViewUserDetail.frame.height / 2
     }
     
 
@@ -31,6 +32,7 @@ class DetailViewController: UIViewController {
         user.surname = ""
         user.login = ""
         user.password = ""
+        user.userImageName = ""
         StorageManager.shared.saveUser(self.user)
         dismiss(animated: true)
         

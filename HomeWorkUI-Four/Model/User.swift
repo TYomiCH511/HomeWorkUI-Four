@@ -10,5 +10,5 @@ struct User: Codable {
     var surname = ""
     var login = ""
     var password = ""
-    var userImageName = ""
+    var userImageName = "defaultFoto"
 }

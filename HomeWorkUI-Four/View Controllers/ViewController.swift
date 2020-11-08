@@ -15,9 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet var loginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var imageViewUser: UIImageView!
+    @IBOutlet var collectionGirlView: UIView!
+    
+    @IBOutlet var photoCollection: [UIImageView]!
+    
     
     @IBOutlet var viewConstreant: NSLayoutConstraint!
-    private var user = User()
+    
+    var user = User()
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,53 +35,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configurePhotoCollection()
+        imageViewUser.layer.cornerRadius = imageViewUser.frame.height / 2
     }
     
     @IBAction func registrationPressed(_ sender: UIButton) {
         
-        if nameTextField.text!.isEmpty || surnameTextField.text!.isEmpty
-            || loginTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
-            callAlertController(with: "Attention", message: "Please enter all text field")
-            
-        } else {
-            user.name = nameTextField.text!
-            user.surname = surnameTextField.text!
-            user.login = loginTextField.text!
-            user.password = passwordTextField.text!
-            
-            StorageManager.shared.saveUser(user)
-            
-            nameTextField.text = nil
-            surnameTextField.text = nil
-            loginTextField.text = nil
-            passwordTextField.text = nil
-        }
-        
-        goToDetailVC()
+        chekUserData(name: nameTextField,
+                     surname: surnameTextField,
+                     login: loginTextField,
+                     password: passwordTextField)
         
     }
     
-    
-    func choosePhotoTap() {
-        viewConstreant.constant = -100
-        
-        UIView.animate(withDuration: 0.5) {
-            self.view.layoutIfNeeded()
-    }
-        
-        
-        
-    }
     
     @IBAction func pressChoosePhoto(_ sender: UITapGestureRecognizer) {
         choosePhotoTap()
     }
     
-    
-    
-    func goToDetailVC() {
-        performSegue(withIdentifier: "detail", sender: view.self)
-    }
 }
 

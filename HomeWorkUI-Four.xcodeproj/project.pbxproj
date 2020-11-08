@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AC188770255479C200E27F93 /* ViewController + Alertcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18876F255479C200E27F93 /* ViewController + Alertcontroller.swift */; };
+		ACB6B8AA2555D889002D45B0 /* ViewController + SelectPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6B8A92555D889002D45B0 /* ViewController + SelectPhoto.swift */; };
+		ACB6B8B02555D9A7002D45B0 /* Extension + ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6B8AF2555D9A7002D45B0 /* Extension + ConfigureViewController.swift */; };
 		ACDB80912554704E00C654B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB80902554704E00C654B4 /* AppDelegate.swift */; };
 		ACDB80932554704E00C654B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB80922554704E00C654B4 /* SceneDelegate.swift */; };
 		ACDB80952554704E00C654B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB80942554704E00C654B4 /* ViewController.swift */; };
@@ -16,11 +18,14 @@
 		ACDB809D2554704E00C654B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDB809B2554704E00C654B4 /* LaunchScreen.storyboard */; };
 		ACDB80AB255471F400C654B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB80AA255471F400C654B4 /* User.swift */; };
 		ACDB80AF2554728700C654B4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB80AE2554728700C654B4 /* DetailViewController.swift */; };
+		ACDBE86B2555C29900CBE322 /* ChekUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDBE86A2555C29900CBE322 /* ChekUserData.swift */; };
 		ACE7083125547DC5003933C8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7083025547DC5003933C8 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC18876F255479C200E27F93 /* ViewController + Alertcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Alertcontroller.swift"; sourceTree = "<group>"; };
+		ACB6B8A92555D889002D45B0 /* ViewController + SelectPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + SelectPhoto.swift"; sourceTree = "<group>"; };
+		ACB6B8AF2555D9A7002D45B0 /* Extension + ConfigureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + ConfigureViewController.swift"; sourceTree = "<group>"; };
 		ACDB808D2554704E00C654B4 /* HomeWorkUI-Four.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWorkUI-Four.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDB80902554704E00C654B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACDB80922554704E00C654B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +36,7 @@
 		ACDB809E2554704E00C654B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACDB80AA255471F400C654B4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ACDB80AE2554728700C654B4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		ACDBE86A2555C29900CBE322 /* ChekUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekUserData.swift; sourceTree = "<group>"; };
 		ACE7083025547DC5003933C8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				AC18876F255479C200E27F93 /* ViewController + Alertcontroller.swift */,
+				ACB6B8A92555D889002D45B0 /* ViewController + SelectPhoto.swift */,
+				ACB6B8AF2555D9A7002D45B0 /* Extension + ConfigureViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE7083025547DC5003933C8 /* StorageManager.swift */,
+				ACDBE86A2555C29900CBE322 /* ChekUserData.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,7 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB6B8B02555D9A7002D45B0 /* Extension + ConfigureViewController.swift in Sources */,
 				ACDB80952554704E00C654B4 /* ViewController.swift in Sources */,
+				ACDBE86B2555C29900CBE322 /* ChekUserData.swift in Sources */,
+				ACB6B8AA2555D889002D45B0 /* ViewController + SelectPhoto.swift in Sources */,
 				ACDB80912554704E00C654B4 /* AppDelegate.swift in Sources */,
 				ACDB80AF2554728700C654B4 /* DetailViewController.swift in Sources */,
 				ACDB80AB255471F400C654B4 /* User.swift in Sources */,
