@@ -14,12 +14,13 @@ class StorageManager {
     
     private var user = User()
     private let defaults = UserDefaults.standard
-    
+    private let keyUser = "savedUser"
     
     func getUser() -> User {
-        if let savedUser = defaults.object(forKey: "savedUser") as? Data {
+        if let savedUser = defaults.object(forKey: keyUser) as? Data {
             if let loadedUser = try? JSONDecoder().decode(User.self, from: savedUser) {
               user = loadedUser
+                print(#function)
             }
             
         }
@@ -27,6 +28,15 @@ class StorageManager {
     }
     func saveUser(_ user: User) {
         guard let userEncoded = try? JSONEncoder().encode(user) else { return }
-        defaults.set(userEncoded, forKey: "savedUser")
+        defaults.set(userEncoded, forKey: keyUser)
+    }
+    
+    func deleteUser(_ user: inout User) {
+        user.name = ""
+        user.surname = ""
+        user.login = ""
+        user.password = ""
+        user.userImageName = "defaultFoto"
+        user.isLogin = false
     }
 }

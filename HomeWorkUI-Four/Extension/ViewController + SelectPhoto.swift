@@ -24,7 +24,10 @@ extension ViewController {
         }()
         
         imageViewUser.image = UIImage(named: user.userImageName)
+        
+        
         viewConstreant.constant = -700
+        light()
         
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()

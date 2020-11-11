@@ -18,10 +18,23 @@ extension ViewController {
     }
     
     func choosePhotoTap() {
-        viewConstreant.constant = -100
+        viewConstreant.constant = -50
+        
+        dark()
         
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if viewConstreant.constant == -50 {
+            viewConstreant.constant = -700
+            
+            light()
+            UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+            }
         }
     }
 }

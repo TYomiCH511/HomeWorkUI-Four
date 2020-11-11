@@ -11,4 +11,5 @@ struct User: Codable {
     var login = ""
     var password = ""
     var userImageName = "defaultFoto"
+    var isLogin = false
 }
