@@ -7,17 +7,21 @@
 
 import UIKit
 
-extension ViewController {
+extension UIImageView {
+    func chekLogoAnimateFail() {
+        self.image = #imageLiteral(resourceName: "back")
+        self.alpha = 1
     
-    func callAlertController(with title: String, message: String) {
-        let alertController = UIAlertController(title: title,
-                                                message: message,
-                                                preferredStyle: .alert)
-        
-        let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
-        alertController.addAction(ok)
-        present(alertController, animated: true, completion: nil)
-        
+        UIView.animate(withDuration: 2) {
+            self.alpha = 0
+            
+        }
     }
+    
+    func chekLogoAnimateTrue() {
+        self.image = #imageLiteral(resourceName: "clear")
+        self.alpha = 1
+    
+    }
+    
 }
