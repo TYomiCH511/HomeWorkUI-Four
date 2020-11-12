@@ -9,6 +9,11 @@ import Foundation
 
 extension ViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        user = StorageManager.shared.getUser()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if user.isLogin == true {
@@ -16,9 +21,5 @@ extension ViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        user = StorageManager.shared.getUser()
-    }
     
 }

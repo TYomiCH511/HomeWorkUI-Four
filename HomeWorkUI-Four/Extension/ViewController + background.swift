@@ -9,16 +9,16 @@ import UIKit
 
 extension ViewController {
     
-func dark() {
-    view.backgroundColor = .gray
+    func dark() {
+        view.backgroundColor = .gray
+        
+        nameTextField.isHidden = true
+        surnameTextField.isHidden = true
+        loginTextField.isHidden = true
+        passwordTextField.isHidden = true
+        registrationBurtton.isHidden = true
+    }
     
-    nameTextField.isHidden = true
-    surnameTextField.isHidden = true
-    loginTextField.isHidden = true
-    passwordTextField.isHidden = true
-    registrationBurtton.isHidden = true
-}
-
     func light() {
         view.backgroundColor = UIColor(red: 229 / 255, green: 229 / 255, blue: 234 / 255, alpha: 1)
         nameTextField.isHidden = false

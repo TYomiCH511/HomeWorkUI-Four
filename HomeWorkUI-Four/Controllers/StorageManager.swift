@@ -20,11 +20,12 @@ class StorageManager {
         if let savedUser = defaults.object(forKey: keyUser) as? Data {
             if let loadedUser = try? JSONDecoder().decode(User.self, from: savedUser) {
               user = loadedUser
-                print(#function)
+                print(#function, user.isLogin)
             }
             
         }
         return user
+        
     }
     func saveUser(_ user: User) {
         guard let userEncoded = try? JSONEncoder().encode(user) else { return }
@@ -32,11 +33,17 @@ class StorageManager {
     }
     
     func deleteUser(_ user: inout User) {
+        defaults.removeObject(forKey: keyUser)
+        print("remove")
         user.name = ""
         user.surname = ""
         user.login = ""
         user.password = ""
         user.userImageName = "defaultFoto"
         user.isLogin = false
+        user.country = ""
+        user.age = ""
+        user.aboutYourself = ""
+        
     }
 }

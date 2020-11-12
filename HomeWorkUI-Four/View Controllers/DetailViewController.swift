@@ -9,7 +9,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    private var user = User()
+    
+    
+    
+    
+    internal var user = User()
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var suranmeLabel: UILabel!
@@ -20,13 +24,48 @@ class DetailViewController: UIViewController {
     
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        user = StorageManager.shared.getUser()
+        
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        nameLabel.text = user.name
+        
+        if user.age != "" {
+            suranmeLabel.text = user.surname + ","
+        } else {
+            suranmeLabel.text = user.surname
+        }
+        
+        countryLabel.text = user.country
+        ageLabel.text = user.age
+        aboutLabel.text = user.aboutYourself
+        imageViewUserDetail.image = UIImage(named: user.userImageName)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        user = StorageManager.shared.getUser()
         nameLabel.text = user.name
-        suranmeLabel.text = user.surname
         
+        if user.age != "" {
+            suranmeLabel.text = user.surname + ","
+        } else {
+            suranmeLabel.text = user.surname
+        }
+        
+        countryLabel.text = user.country
+        ageLabel.text = user.age
+        aboutLabel.text = user.aboutYourself
         imageViewUserDetail.image = UIImage(named: user.userImageName)
         
     }
@@ -38,5 +77,7 @@ class DetailViewController: UIViewController {
         
         dismiss(animated: true)
     }
+    
+    
     
 }
